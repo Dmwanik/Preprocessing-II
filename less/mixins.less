@@ -1,1 +1,81 @@
 // Mixins in here
+@mobile: ~"(max-width: 500px)";
+@tablet: ~"(max-width: 800px)";
+
+.center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+  }
+  
+  .button-creator(@width, @height, @bg-color, @font-color, @font-size) {
+    .border-radius(15px);
+    .center;
+    width: @width;
+    height: @height;
+    background-color: @bg-color;
+    color: @font-color;
+    border: 1px solid @silver;
+    cursor: pointer;
+    font-size: @font-size;
+  
+    @media @mobile {
+      width: 100%;
+    }
+  
+    &:hover {
+      background: @white;
+      color: @button-bg;
+    }
+  }
+  
+  // stretch
+  header nav a:hover {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 4s;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  @keyframes example {
+    from {
+      background-color: @sandy-beach;
+    }
+    to {
+      background-color: @navigation-border;
+    }
+  }
+  .formz {
+    display: flex;
+    flex-direction: column;
+    .center();
+    font-size: 2.5rem;
+    color:@shark;
+    font-family: indie Flower;
+    max-width: 100%;
+    background: @sandy-beach;
+    }
+    .formz .texts {
+      height: 30px;
+    }
+    .btnz {
+      border-radius: 15px;
+      display: flex;
+      width: 200px;
+      height:45px;
+      background-color: @white;
+      margin: 10px;
+      font-size: 1.8rem;
+      justify-content: center;
+    }
+    
+  
