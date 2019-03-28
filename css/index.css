@@ -408,3 +408,11 @@ img {
   height: 30px;
   border-radius: 13px;
 }
+.info {
+margin-top: 10px;
+}
+.txt-area{
+  height: 200px;
+  width: 400px;
+  border-radius: 13px;
+}
